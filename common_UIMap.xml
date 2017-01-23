@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+
+<properties>
+
+    <!-- id locators -->
+    <entry key="bread_crum_id">breadcrumb</entry>
+    
+       
+    
+    <!-- link locators -->
+	<entry key="cust_tab_link">Customer</entry>
+	
+    
+    <!--xpath locators -->
+    <entry key="eportalfirsttab_xpath">//ul[@id='nav']/li[1]/a</entry>
+	
+	
+		 
+	<!--css locators -->
+	 <entry key="colheaders_css">tr.header-row-2 td</entry>
+	 
+	
+	<!-- name locators -->
+	<entry key="username_name">USERNAME</entry>
+	
+	
+		
+</properties>

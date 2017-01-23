@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+
+<properties>
+
+    <!-- id locators -->
+    <entry key="login_id">Email</entry>
+    <entry key="pswd_id">sapCode</entry>   
+    
+    <!-- link locators -->
+	<entry key="viv_entities_link">View Entities</entry>
+    
+    
+    <!--xpath locators -->   
+    <entry key="entity_plusbtn_xpath">//li[.='Entity']</entry>   
+    <entry key="okbtn_xpath">//input[@value='OK' and @class='newAddDialogButton']</entry>   
+    <entry key="tambttn_xpath">//td[div[contains(text(),'ENTITYNAME')]]/following-sibling::td[div[img[@title='Enabled']]]</entry>   
+   
+	<!--css locators -->
+	<entry key="add_entymodalwin_css">div.dialogModal</entry>
+	
+		
+</properties>

@@ -1,0 +1,21 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<!-- $HeadURL: https://svn.ingenico.com/SPO/Dev/E2E/trunk/suites/CardPayment.xml 
+	$ $Id: AllTests.xml 16582 2016-01-08 09:14:23Z rkahreddyga $ -->
+
+<!-- To run tests cases in parallel modify suite tag as parallel="tests" -->
+<!-- To run tests cases in sequential modify suite tag as parallel="false" -->
+<!--To run tests with IE use <parameter name="browser" value="internet explorer" 
+	/> -->
+<!--To run tests with firefox use <parameter name="browser" value="firefox" 
+	/> -->
+<!--To run tests with chrome use <parameter name="browser" value="chrome" 
+	/> -->
+
+<suite name="All" verbose="3" parallel="false"	preserve-order="true" time-out="600000">
+	<parameter name="browser" value="firefox" />
+	
+	
+    <test name="TestCaseOne"><classes><class name="com.ingenico.entitymanagement.TestCaseOne"></class></classes></test>	
+	
+</suite>
