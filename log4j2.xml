@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <Configuration status="WARN"> -->
+<Configuration name="log-test" packages="com.ingenico.base">
+	<Appenders>
+
+		<!--<File name="TESTFILE" fileName="logInFile.log" append="false"> <PatternLayout 
+			pattern="%d [%p] %c{1} - %m%n"/> </File> -->
+
+		<Console name="Console" target="SYSTEM_OUT">
+			<PatternLayout pattern="%d [%p] %c{1} - %m%n" />
+		</Console>
+
+		<TestNGAppender name="custAppender">
+		</TestNGAppender>
+
+	</Appenders>
+	<Loggers>
+		<Root level="INFO">
+			<!-- <AppenderRef ref="TESTFILE"/> -->
+			<AppenderRef ref="custAppender" level="info"/>
+			<AppenderRef ref="Console" level="error"/>
+		</Root>
+	</Loggers>
+</Configuration>
