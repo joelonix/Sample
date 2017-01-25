@@ -1,0 +1,36 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<!-- $HeadURL: 
+	$ $Id: XChannelProv.xml 17718 2016-03-24 10:59:05Z haripraks $  -->
+
+<!-- To run tests cases in parallel modify suite tag as parallel="tests" -->
+<!-- To run tests cases in sequential modify suite tag as parallel="false" -->
+<!--To run tests with IE use <parameter name="browser" value="internet explorer" 
+	/> -->
+<!--To run tests with firefox use <parameter name="browser" value="firefox" 
+	/> -->
+<!--To run tests with chrome use <parameter name="browser" value="chrome" 
+	/> -->
+
+<suite name="XChannelProv" verbose="3" parallel="false"
+	preserve-order="true" time-out="600000">
+	<test name="E2E">
+		<groups>
+			<define name="All">
+				<include name="SMR1167" />
+								
+			</define>
+			<run>
+				<include name="All" />
+			</run>
+			<dependencies>
+				<group name="" depends-on=""></group> 
+
+			</dependencies>
+		</groups>
+		<classes>
+			<class name="com.ingenico.testsuite.crosschannel.SMR1167"></class>
+						
+		</classes>
+	</test>
+</suite>

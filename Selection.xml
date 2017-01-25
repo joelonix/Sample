@@ -1,0 +1,85 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<!-- $HeadURL: https://svn.ingenico.com/SPO/Dev/E2E/trunk/suites/CardPayment.xml 
+	$ $Id: Selection.xml 18037 2016-04-13 09:56:17Z rkahreddyga $ -->
+
+<!-- To run tests cases in parallel modify suite tag as parallel="tests" -->
+<!-- To run tests cases in sequential modify suite tag as parallel="false" -->
+<!--To run tests with IE use <parameter name="browser" value="internet explorer" 
+	/> -->
+<!--To run tests with firefox use <parameter name="browser" value="firefox" 
+	/> -->
+<!--To run tests with chrome use <parameter name="browser" value="chrome" 
+	/> -->
+
+<suite name="All" verbose="3" parallel="false"	preserve-order="true" time-out="600000">
+
+    <test name="SMR1936"><classes><class name="com.ingenico.testsuite.location.SMR1936"></class></classes></test>
+    <!-- <test name="SMR14"><classes><class name="com.ingenico.testsuite.entitymanagement.SMR14"></class></classes></test> -->	
+    <!-- <test name="SMR16"><classes><class name="com.ingenico.testsuite.location.SMR16"></class></classes></test> -->
+    <!-- <test name="SMR17"><classes><class name="com.ingenico.testsuite.tmsmanagement.SMR17"></class></classes></test>
+    <test name="SMR1872"><classes><class name="com.ingenico.testsuite.customermanagement.SMR1872"></class></classes></test>	
+    <test name="SMR49"><classes><class name="com.ingenico.testsuite.customermanagement.SMR49"></class></classes></test>
+	<test name="SMR1155"><classes><class name="com.ingenico.testsuite.customermanagement.SMR1155"></class></classes></test>
+	<test name="SMR52"><classes><class name="com.ingenico.testsuite.cardpayment.SMR52"></class></classes></test>
+	<test name="SMR53"><classes><class name="com.ingenico.testsuite.cardpayment.SMR53"></class></classes></test>
+	<test name="SMR51"><classes><class name="com.ingenico.testsuite.cardpayment.SMR51"></class></classes></test>
+	<test name="SMR208"><classes><class name="com.ingenico.testsuite.cardpayment.SMR208"></class></classes></test>
+	<test name="SMR50"><classes><class name="com.ingenico.testsuite.cardpayment.SMR50"></class></classes></test>
+	<test name="SMR136"><classes><class name="com.ingenico.testsuite.cardpayment.SMR136"></class></classes></test>
+	<test name="SMR1021"><classes><class name="com.ingenico.testsuite.gprs.SMR1021"></class></classes></test>
+	<test name="SMR111"><classes><class name="com.ingenico.testsuite.tmsmanagement.SMR111"></class></classes></test>
+	<test name="SMR11"><classes><class name="com.ingenico.testsuite.usermanagement.SMR11"></class></classes></test>
+	<test name="SMR12"><classes><class name="com.ingenico.testsuite.usermanagement.SMR12"></class></classes></test>
+	<test name="SMR1879"><classes><class name="com.ingenico.testsuite.usermanagement.SMR1879"></class></classes></test>
+	<test name="SMR1881"><classes><class name="com.ingenico.testsuite.usermanagement.SMR1881"></class></classes></test>
+	<test name="SMR214"><classes><class name="com.ingenico.testsuite.cardpayment.SMR214"></class></classes></test>
+	<test name="SMR166"><classes><class name="com.ingenico.testsuite.cardpayment.SMR166"></class></classes></test>
+	<test name="SMR151"><classes><class name="com.ingenico.testsuite.cardpayment.SMR151"></class></classes></test>
+	<test name="SMR1004"><classes><class name="com.ingenico.testsuite.tmsmanagement.SMR1004"></class></classes></test>
+	<test name="SMR1141"><classes><class name="com.ingenico.testsuite.eportal.SMR1141"></class></classes></test>
+	<test name="SMR1145"><classes><class name="com.ingenico.testsuite.eportal.SMR1145"></class></classes></test>
+	<test name="SMR1379"><classes><class name="com.ingenico.testsuite.customermanagement.SMR1379"></class></classes></test>
+	<test name="SMR1143"><classes><class name="com.ingenico.testsuite.eportal.SMR1143"></class></classes></test> 
+	<test name="SMR169"><classes><class name="com.ingenico.testsuite.cardpayment.SMR169"></class></classes></test>
+    <test name="SMR1137"><classes><class name="com.ingenico.testsuite.eportal.SMR1137"></class></classes></test> 
+	<test name="SMR157"><classes><class name="com.ingenico.testsuite.cardpayment.SMR157"></class></classes></test>
+	<test name="SMR139"><classes><class name="com.ingenico.testsuite.cardpayment.SMR139"></class></classes></test>
+	<test name="SMR142"><classes><class name="com.ingenico.testsuite.cardpayment.SMR142"></class></classes></test>
+	<test name="SMR1008"><classes><class name="com.ingenico.testsuite.tmsmanagement.SMR1008"></class></classes></test>
+	<test name="SMR232"><classes><class name="com.ingenico.testsuite.assettracking.SMR232"></class></classes></test>
+	<test name="SMR140"><classes><class name="com.ingenico.testsuite.cardpayment.SMR140"></class></classes></test>
+	<test name="SMR143"><classes><class name="com.ingenico.testsuite.cardpayment.SMR143"></class></classes></test>
+	<test name="SMR174"><classes><class name="com.ingenico.testsuite.cardpayment.SMR174"></class></classes></test>
+	<test name="SMR1031"><classes><class name="com.ingenico.testsuite.gprs.SMR1031"></class></classes></test>
+	<test name="SMR1035"><classes><class name="com.ingenico.testsuite.gprs.SMR1035"></class></classes></test>
+	<test name="SMR1039"><classes><class name="com.ingenico.testsuite.gprs.SMR1039"></class></classes></test>
+	<test name="SMR1093"><classes><class name="com.ingenico.testsuite.gprs.SMR1093"></class></classes></test>
+	<test name="SMR1015"><classes><class name="com.ingenico.testsuite.gprs.SMR1015"></class></classes></test>
+	<test name="SMR1016"><classes><class name="com.ingenico.testsuite.gprs.SMR1016"></class></classes></test>
+	<test name="SMR999"><classes><class name="com.ingenico.testsuite.gprs.SMR999"></class></classes></test>
+	<test name="SMR203"><classes><class name="com.ingenico.testsuite.cardpayment.SMR203"></class></classes></test> 
+	<test name="SMR209"><classes><class name="com.ingenico.testsuite.cardpayment.SMR209"></class></classes></test> 
+	<test name="SMR9"><classes><class name="com.ingenico.testsuite.crosschannel.SMR9"></class></classes></test>
+	<test name="SMR1042"><classes><class name="com.ingenico.testsuite.gprs.SMR1042"></class></classes></test>
+	<test name="SMR1055"><classes><class name="com.ingenico.testsuite.gprs.SMR1055"></class></classes></test> 
+	<test name="SMR1046"><classes><class name="com.ingenico.testsuite.gprs.SMR1046"></class></classes></test>
+	<test name="SMR1075"><classes><class name="com.ingenico.testsuite.gprs.SMR1075"></class></classes></test>
+	<test name="SMR1059"><classes><class name="com.ingenico.testsuite.gprs.SMR1059"></class></classes></test>
+	<test name="SMR1060"><classes><class name="com.ingenico.testsuite.gprs.SMR1060"></class></classes></test>
+	<test name="SMR1319"><classes><class name="com.ingenico.testsuite.tokenserver.SMR1319"></class></classes></test>
+	<test name="SMR1056"><classes><class name="com.ingenico.testsuite.gprs.SMR1056"></class></classes></test>  
+	<test name="SMR1057"><classes><class name="com.ingenico.testsuite.gprs.SMR1057"></class></classes></test>
+	<test name="SMR1083"><classes><class name="com.ingenico.testsuite.gprs.SMR1083"></class></classes></test>
+	<test name="SMR1084"><classes><class name="com.ingenico.testsuite.gprs.SMR1084"></class></classes></test> 
+	<test name="SMR873"><classes><class name="com.ingenico.testsuite.tmsmanagement.SMR873"></class></classes></test>
+	<test name="SMR879"><classes><class name="com.ingenico.testsuite.tmsmanagement.SMR879"></class></classes></test> 
+	<test name="SMR1870"><classes><class name="com.ingenico.testsuite.usermanagement.SMR1870"></class></classes></test> 
+	<test name="SMR1167"><classes><class name="com.ingenico.testsuite.crosschannel.SMR1167"></class></classes></test> 
+	<test name="SMR1269"><classes><class name="com.ingenico.testsuite.tokenserver.SMR1269"></class></classes></test>
+	<test name="SMR874"><classes><class name="com.ingenico.testsuite.tmsmanagement.SMR874"></class></classes></test> 
+	<test name="SMR2479"><classes><class name="com.ingenico.testsuite.tmsmanagement.SMR2479"></class></classes></test>
+	<test name="SMR875"><classes><class name="com.ingenico.testsuite.tmsmanagement.SMR875"></class></classes></test>  
+    <test name="SMR2418"><classes><class name="com.ingenico.testsuite.tmsmanagement.SMR2418"></class></classes></test> --> 
+    
+</suite>

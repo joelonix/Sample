@@ -1,0 +1,175 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<!-- $HeadURL: https://svn.ingenico.com/SPO/Dev/E2E/trunk/suites/CardPayment.xml 
+	$ $Id: Regression.xml 18094 2016-04-18 04:58:31Z rkahreddyga $ -->
+
+<!-- To run tests cases in parallel modify suite tag as parallel="tests" -->
+<!-- To run tests cases in sequential modify suite tag as parallel="false" -->
+<!--To run tests with IE use <parameter name="browser" value="internet explorer" 
+	/> -->
+<!--To run tests with firefox use <parameter name="browser" value="firefox" 
+	/> -->
+<!--To run tests with chrome use <parameter name="browser" value="chrome" 
+	/> -->
+
+<suite name="Regression" verbose="3" parallel="false"
+	preserve-order="true" time-out="600000">
+	<test name="E2E">
+		<groups>
+			<define name="All">
+				<include name="SMR1872" />
+				<include name="SMR49" />
+				<include name="SMR1155" />
+				<include name="SMR52" />
+				<include name="SMR53" />
+				<include name="SMR51" />
+				<include name="SMR208" />
+				<include name="SMR50" />
+				<include name="SMR166" />
+				<include name="SMR151" />
+				<include name="SMR136" />
+				<!-- <include name="SMR187" /> -->
+				<include name="SMR169" />
+				<include name="SMR1021" />
+				<include name="SMR111" />
+				<include name="SMR1004" />
+				<include name="SMR11" />
+				<include name="SMR12" />
+				<include name="SMR1879" />
+				<include name="SMR1881" />
+				<include name="SMR1141" />
+				<include name="SMR1143" />
+				<include name="SMR1145" />
+				<include name="SMR1137" />
+				<include name="SMR1008" />
+				<!--<include name="SMR119" /> -->
+				<include name="SMR1031" />
+				<include name="SMR1039" />
+				<include name="SMR1093" />
+				<include name="SMR1015" />
+				<include name="SMR1016" />
+				<include name="SMR999" />
+				<include name="SMR9" />
+				<include name="SMR1035" />
+				<include name="SMR1042" />
+				<include name="SMR1055" />
+				<include name="SMR1046" />
+				<include name="SMR1075" />
+				<include name="SMR1059" />
+				<include name="SMR1060" />
+				<include name="SMR209" />
+				<include name="SMR1319" />
+				<include name="SMR873" />
+				<include name="SMR879" />
+				<include name="SMR2479"/>
+				<include name="SMR1870"/>
+				<include name="SMR1269"/>
+				
+			</define>
+			<run>
+				<include name="All" />
+			</run>
+			<dependencies>
+				<group name="SMR1872" depends-on="SMR14 SMR17"></group>
+				<group name="SMR49" depends-on="SMR1872"></group>
+				<group name="SMR1155" depends-on="SMR49"></group>
+				<group name="SMR52" depends-on="SMR1155"></group>
+				<group name="SMR53" depends-on="SMR1155"></group>
+				<group name="SMR51" depends-on="SMR52 SMR53"></group>
+				<group name="SMR208" depends-on="SMR52 SMR53"></group>
+				<group name="SMR50" depends-on="SMR51"></group>
+				<group name="SMR166" depends-on="SMR50"></group>
+				<group name="SMR151" depends-on="SMR50"></group>
+				<group name="SMR136" depends-on="SMR208"></group>
+				<group name="SMR209" depends-on="SMR50"></group>
+				<!-- <group name="SMR187" depends-on="SMR52"></group> -->
+				<group name="SMR169" depends-on="SMR136"></group>
+				<group name="SMR111" depends-on="SMR1155"></group>
+				<group name="SMR1004" depends-on="SMR111"></group>
+				<group name="SMR11" depends-on="SMR1155"></group>
+				<group name="SMR12" depends-on="SMR1155"></group>
+				<group name="SMR1879" depends-on="SMR1155"></group>
+				<group name="SMR1881" depends-on="SMR1155"></group>
+				<group name="SMR1141" depends-on="SMR1155"></group>
+				<group name="SMR1143" depends-on="SMR1155"></group>
+				<group name="SMR1145" depends-on="SMR1155"></group>
+				<group name="SMR1137" depends-on="SMR1155 SMR50"></group>
+				<group name="SMR1008" depends-on="SMR111"></group>
+				<!-- <group name="SMR119" depends-on="SMR111"></group> -->
+				<group name="SMR1031" depends-on="SMR1155"></group>
+				<group name="SMR1015" depends-on="SMR1155"></group>
+				<group name="SMR1016" depends-on="SMR1155 SMR1015 SMR1031"></group>
+				<group name="SMR1093" depends-on="SMR1039"></group>
+				<group name="SMR9" depends-on="SMR1879"></group>
+				<group name="SMR1035" depends-on="SMR1155 SMR1021 SMR1031"></group>
+				<group name="SMR1042" depends-on="SMR1155 SMR1093 SMR1035"></group>
+				<group name="SMR1055" depends-on="SMR1042"></group>
+				<group name="SMR1046" depends-on="SMR1055"></group>
+				<group name="SMR1075" depends-on="SMR1055"></group>
+				<group name="SMR1059" depends-on="SMR1046"></group>
+				<group name="SMR1060" depends-on="SMR1059"></group>
+				<group name="SMR1319" depends-on="SMR1155"></group>
+				<group name="SMR873" depends-on="SMR1155"></group>
+				<group name="SMR879" depends-on="SMR873"></group>
+				<group name="SMR2479" depends-on="SMR1879"></group>
+				<group name="SMR1269" depends-on="SMR1319 SMR1879"></group>
+				<group name="SMR1870" depends-on="SMR1881"></group>
+				
+				
+			</dependencies>
+		</groups>
+		<classes>
+			<class name="com.ingenico.testsuite.entitymanagement.SMR14"></class>
+			<!-- <class name="com.ingenico.testsuite.location.SMR1273"></class> -->
+			<class name="com.ingenico.testsuite.tmsmanagement.SMR17"></class>
+			<class name="com.ingenico.testsuite.customermanagement.SMR1872"></class>
+			<class name="com.ingenico.testsuite.customermanagement.SMR49"></class>
+			<class name="com.ingenico.testsuite.customermanagement.SMR1155"></class>
+			<class name="com.ingenico.testsuite.cardpayment.SMR52"></class>
+			<class name="com.ingenico.testsuite.cardpayment.SMR53"></class>
+			<class name="com.ingenico.testsuite.cardpayment.SMR51"></class>
+			<class name="com.ingenico.testsuite.cardpayment.SMR208"></class>
+			<class name="com.ingenico.testsuite.cardpayment.SMR50"></class>
+			<class name="com.ingenico.testsuite.cardpayment.SMR166"></class>
+			<class name="com.ingenico.testsuite.cardpayment.SMR151"></class>
+			<class name="com.ingenico.testsuite.cardpayment.SMR136"></class>
+			<class name="com.ingenico.testsuite.cardpayment.SMR209"></class> 
+			<!-- <class name="com.ingenico.testsuite.cardpayment.SMR187"></class> -->
+			<class name="com.ingenico.testsuite.cardpayment.SMR169"></class>
+			<class name="com.ingenico.testsuite.gprs.SMR1021"></class>
+			<class name="com.ingenico.testsuite.tmsmanagement.SMR111"></class>
+			<class name="com.ingenico.testsuite.tmsmanagement.SMR1004"></class>
+			<class name="com.ingenico.testsuite.usermanagement.SMR11"></class>
+			<class name="com.ingenico.testsuite.usermanagement.SMR12"></class>
+			<class name="com.ingenico.testsuite.usermanagement.SMR1879"></class>
+			<class name="com.ingenico.testsuite.usermanagement.SMR1881"></class>
+			<class name="com.ingenico.testsuite.usermanagement.SMR1870"></class>	
+			<class name="com.ingenico.testsuite.eportal.SMR1141"></class>
+			<class name="com.ingenico.testsuite.eportal.SMR1143"></class>
+			<class name="com.ingenico.testsuite.eportal.SMR1145"></class>
+			<class name="com.ingenico.testsuite.eportal.SMR1137"></class>
+			<class name="com.ingenico.testsuite.tmsmanagement.SMR1008"></class>
+			<!-- <class name="com.ingenico.testsuite.tmsmanagement.SMR119"></class> -->
+			<class name="com.ingenico.testsuite.gprs.SMR1031"></class>
+			<class name="com.ingenico.testsuite.gprs.SMR1039"></class>
+			<class name="com.ingenico.testsuite.gprs.SMR1093"></class>
+			<class name="com.ingenico.testsuite.gprs.SMR1015"></class>
+			<class name="com.ingenico.testsuite.gprs.SMR1016"></class>
+			<class name="com.ingenico.testsuite.crosschannel.SMR9"></class>
+			<class name="com.ingenico.testsuite.gprs.SMR1035"></class>
+			<class name="com.ingenico.testsuite.gprs.SMR1042"></class>
+			<class name="com.ingenico.testsuite.gprs.SMR1055"></class>
+			<class name="com.ingenico.testsuite.gprs.SMR1046"></class>
+			<class name="com.ingenico.testsuite.gprs.SMR1075"></class>
+			<class name="com.ingenico.testsuite.gprs.SMR1059"></class>
+			<class name="com.ingenico.testsuite.gprs.SMR1060"></class>
+			<class name="com.ingenico.testsuite.tokenserver.SMR1319"></class>
+			<class name="com.ingenico.testsuite.tokenserver.SMR1269"></class>
+			<class name="com.ingenico.testsuite.tmsmanagement.SMR873"></class>
+			<class name="com.ingenico.testsuite.tmsmanagement.SMR879"></class>
+			<class name="com.ingenico.testsuite.tmsmanagement.SMR2479"></class>	
+				
+			
+		</classes>
+	</test>
+</suite>
